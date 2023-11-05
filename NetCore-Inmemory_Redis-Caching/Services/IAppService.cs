@@ -1,4 +1,5 @@
-﻿using NetCore_Inmemory_Redis_Caching.Models;
+﻿using Microsoft.Extensions.Caching.Memory;
+using NetCore_Inmemory_Redis_Caching.Models;
 
 namespace NetCore_Inmemory_Redis_Caching.Services
 {
@@ -8,6 +9,9 @@ namespace NetCore_Inmemory_Redis_Caching.Services
 		Task<List<Todo>> GetTodos();
 
 		void RemoveFromCache(string key);
+        void ClearCache();
+        void CompactCache(double percantage);
+        MemoryCacheStatistics GetCacheStatistics();
     }
 }
 

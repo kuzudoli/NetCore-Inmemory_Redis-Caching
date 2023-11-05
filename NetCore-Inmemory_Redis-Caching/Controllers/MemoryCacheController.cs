@@ -33,5 +33,24 @@ namespace NetCore_Inmemory_Redis_Caching.Controllers
         {
             _appService.RemoveFromCache(key);
         }
+
+        [HttpGet("[action]")]
+        public void ClearCache()
+        {
+            _appService.ClearCache();
+        }
+
+        [HttpGet("[action]")]
+        public void CompactCache(double percantage)
+        {
+            _appService.CompactCache(percantage);
+        }
+
+        [HttpGet("[action]")]
+        public MemoryCacheStatistics GetCacheStatistics()
+        {
+            var data = _appService.GetCacheStatistics();
+            return data;
+        }
     }
 }

@@ -6,11 +6,11 @@ namespace NetCore_Inmemory_Redis_Caching.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class MemoryCacheController : Controller
+    public class CacheController : Controller
     {
         private readonly IAppService _appService;
 
-        public MemoryCacheController(IAppService appService)
+        public CacheController(IAppService appService)
         {
             _appService = appService;
         }

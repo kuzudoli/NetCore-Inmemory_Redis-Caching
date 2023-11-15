@@ -11,7 +11,6 @@ namespace NetCore_Inmemory_Redis_Caching
             // Add services to the container.
             builder.Services.AddSingleton<IAppService, AppService>();
 
-            builder.Services.AddMemoryCache();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Caching.Memory;
 using NetCore_Inmemory_Redis_Caching.Models;
 using NetCore_Inmemory_Redis_Caching.Services;
 

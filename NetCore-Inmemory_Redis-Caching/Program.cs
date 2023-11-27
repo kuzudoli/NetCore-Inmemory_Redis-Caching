@@ -11,6 +11,11 @@ namespace NetCore_Inmemory_Redis_Caching
             // Add services to the container.
             builder.Services.AddSingleton<IAppService, AppService>();
 
+            builder.Services.AddStackExchangeRedisCache(opt =>
+            {
+                opt.Configuration = "localhost:6379";//connection string
+                //opt.InstanceName = "test"; ???
+            });
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
